@@ -1,7 +1,7 @@
 {
   "name": "@exodus/neon-api",
   "description": "Neon-API module: High level API for neon-js",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ExodusMovement/neon-js.git"

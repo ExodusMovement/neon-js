@@ -1,7 +1,7 @@
 {
   "name": "@exodus/neon-js",
   "description": "Neon-JS SDK for interacting with NEO blockchain",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ExodusMovement/neon-js.git"

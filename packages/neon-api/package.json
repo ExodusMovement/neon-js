@@ -1,5 +1,5 @@
 {
-  "name": "@cityofzion/neon-api",
+  "name": "@exodus/neon-api",
   "description": "Neon-API module: High level API for neon-js",
   "version": "5.0.0-next.16",
   "repository": {
@@ -16,7 +16,7 @@
     "javascript",
     "libraries"
   ],
-  "author": "Yak Jun Xiang <snowypowers@gmail.com> (https://github.com/snowypowers)",
+  "author": "Exodus Movement, Inc.",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "lib/index.js",

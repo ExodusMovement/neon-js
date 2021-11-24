@@ -1,5 +1,5 @@
 {
-  "name": "@cityofzion/neon-js",
+  "name": "@exodus/neon-js",
   "description": "Neon-JS SDK for interacting with NEO blockchain",
   "version": "5.0.0-next.16",
   "repository": {
@@ -16,7 +16,7 @@
     "javascript",
     "libraries"
   ],
-  "author": "Yak Jun Xiang <snowypowers@gmail.com> (https://github.com/snowypowers)",
+  "author": "Exodus Movement, Inc.",
   "license": "MIT",
   "main": "dist/index.js",
   "browser": "dist/browser.js",

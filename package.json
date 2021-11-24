@@ -16,7 +16,7 @@
     "pretty": "prettier --write --loglevel=warn \"**/{src,__{tests,integration}__}/**/*.ts\"",
     "release:latest": "lerna publish from-package",
     "release:next": "lerna publish from-git --canary --pre-dist-tag next",
-    "release": "yarn build && lerna publish --registry=https://registry.npmjs.org",
+    "release": "yarn build && lerna publish --registry=https://registry.npmjs.or",
     "start": "jest --watch",
     "test": "jest",
     "version:latest": "lerna version --conventional-commits --no-changelog",

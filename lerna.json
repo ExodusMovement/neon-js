@@ -13,14 +13,16 @@
       "allowBranch": [
         "master",
         "next",
-        "archive/*"
+        "archive/*",
+        "exodus"
       ]
     },
     "publish": {
       "allowBranch": [
         "master",
         "next",
-        "archive/*"
+        "archive/*",
+        "exodus"
       ]
     }
   }

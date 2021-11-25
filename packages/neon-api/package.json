@@ -9,7 +9,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "private": true,
   "keywords": [
     "neo",
     "antshares",

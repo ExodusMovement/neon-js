@@ -47,6 +47,7 @@ export interface TransactionLike {
   attributes: TransactionAttributeLike[];
   witnesses: WitnessLike[];
   script: string;
+  receiver: string;
 }
 
 export interface TransactionJson {
@@ -63,6 +64,7 @@ export interface TransactionJson {
   // base64-encoded
   script: string;
   witnesses: WitnessJson[];
+  receiver: string;
 }
 
 export class Transaction implements NeonObject<TransactionLike> {
@@ -117,7 +119,7 @@ export class Transaction implements NeonObject<TransactionLike> {
   public signers: Signer[];
   public witnesses: Witness[];
   public script: HexString;
-
+  public receiver: string;
   /**
    * Maximum duration in blocks that a transaction can stay valid in the mempool.
    * This is 24 hours based on 15s blocktime.
@@ -146,6 +148,10 @@ export class Transaction implements NeonObject<TransactionLike> {
       output.#addressVersion = new Account(input.sender).addressVersion;
     }
 
+    if (input.receiver) {
+      output.addReceiver(input.receiver);
+    }
+
     return output;
   }
 
@@ -162,6 +168,7 @@ export class Transaction implements NeonObject<TransactionLike> {
       signers = [],
       witnesses,
       script,
+      receiver,
     } = tx;
     this.version = version ?? TX_VERSION;
     this.nonce = nonce ?? parseInt(ab2hexstring(generateRandomArray(4)), 16);
@@ -186,6 +193,7 @@ export class Transaction implements NeonObject<TransactionLike> {
         ? networkFee
         : BigInteger.fromNumber(networkFee ?? 0);
     this.script = HexString.fromHex(script ?? "");
+    this.receiver = receiver || "";
   }
 
   public get [Symbol.toStringTag](): string {
@@ -250,6 +258,10 @@ export class Transaction implements NeonObject<TransactionLike> {
       txObj = deserializeWitnesses(ss, txObj);
     }
     return new Transaction(txObj);
+  }
+
+  public addReceiver(receiver: string) {
+    this.receiver = receiver;
   }
 
   public addSigner(newSigner: SignerLike | Signer): this {
@@ -379,6 +391,7 @@ export class Transaction implements NeonObject<TransactionLike> {
       signers: this.signers.map((s) => s.export()),
       witnesses: this.witnesses.map((a) => a.export()),
       script: this.script.toBigEndian(),
+      receiver: this.receiver,
     };
   }
 
@@ -401,6 +414,7 @@ export class Transaction implements NeonObject<TransactionLike> {
       signers: this.signers.map((c) => c.toJson()),
       script: this.script.toBase64(),
       witnesses: this.witnesses.map((w) => w.toJson()),
+      receiver: this.receiver,
     };
   }
 

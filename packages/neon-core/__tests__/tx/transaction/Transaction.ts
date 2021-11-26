@@ -5,6 +5,7 @@ import {
   TransactionJson,
   Witness,
 } from "../../../src/tx";
+// @ts-ignore
 import samples from "./Transaction.json";
 import { Account } from "../../../src/wallet";
 
@@ -112,6 +113,7 @@ describe("export", () => {
     systemFee: "12",
     networkFee: "13",
     validUntilBlock: 1000,
+    receiver: "",
     signers: [
       {
         account: "39e9c91012be63a58504e52b7318c1274554ae3d",

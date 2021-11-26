@@ -8,6 +8,7 @@ export class TransactionBuilder {
   private attributes: tx.TransactionAttribute[] = [];
   private signers: tx.Signer[] = [];
   private witnesses: tx.Witness[] = [];
+  private receiver = "";
 
   public static newBuilder(): TransactionBuilder {
     return new TransactionBuilder();
@@ -39,6 +40,7 @@ export class TransactionBuilder {
   ): TransactionBuilder {
     const address = account.address;
     const contract = new sc.Nep17Contract(tokenScriptHash);
+    this.receiver = destination;
     return this.addContractCall(
       contract.transfer(address, destination, amt)
     ).addBasicSignatureField(account);
@@ -183,6 +185,8 @@ export class TransactionBuilder {
 
   public build(): tx.Transaction {
     return new tx.Transaction({
+      // @ts-ignore
+      receiver: this.receiver,
       networkFee: this.networkFee,
       systemFee: this.systemFee,
       signers: this.signers,

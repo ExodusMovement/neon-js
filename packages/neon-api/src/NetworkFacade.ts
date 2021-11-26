@@ -1,4 +1,4 @@
-import { rpc, sc, tx, u, wallet } from "@cityofzion/neon-core";
+import { rpc, sc, tx, u, wallet } from "@exodus/neon-core";
 import { getTokenInfos } from "./api";
 import { Candidate, getCandidates } from "./api/getCandidates";
 import {
@@ -7,7 +7,7 @@ import {
   ValidationAttributes,
   ValidationResult,
 } from "./transaction";
-import { SigningFunction } from "./transaction/signing";
+import { SigningFunction } from "./transaction";
 
 export interface NetworkFacadeConfig {
   node: string | rpc.NeoServerRpcClient;
@@ -98,8 +98,7 @@ export class NetworkFacade {
     }
 
     const signedTxn = await this.sign(txn, config);
-    const sendResult = await this.getRpcNode().sendRawTransaction(signedTxn);
-    return sendResult;
+    return this.getRpcNode().sendRawTransaction(signedTxn);
   }
 
   /**
@@ -119,8 +118,7 @@ export class NetworkFacade {
     }
 
     const signedTxn = await this.sign(txn, config);
-    const sendResult = await this.getRpcNode().sendRawTransaction(signedTxn);
-    return sendResult;
+    return this.getRpcNode().sendRawTransaction(signedTxn);
   }
 
   /**
@@ -145,8 +143,7 @@ export class NetworkFacade {
     }
 
     const signedTxn = await this.sign(txn, config);
-    const sendResult = await this.getRpcNode().sendRawTransaction(signedTxn);
-    return sendResult;
+    return this.getRpcNode().sendRawTransaction(signedTxn);
   }
 
   /**

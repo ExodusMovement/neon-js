@@ -481,6 +481,39 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@cityofzion/neon-api@^5.0.0-next.16":
+  version "5.0.0-next.16"
+  resolved "https://registry.yarnpkg.com/@cityofzion/neon-api/-/neon-api-5.0.0-next.16.tgz#83d2f70c43b124424817ce1acf1925c5cb8131b4"
+  integrity sha512-wn7skR+gPvMGUS2GTP9xAW6TP0kwigtLC9+tV7xbl2idaRk3SVGzpI6TrPzCAtZ+mTCqznUjzT/R2jQTSxsCPg==
+  dependencies:
+    isomorphic-ws "4.0.1"
+    ws "7.4.4"
+
+"@cityofzion/neon-core@^5.0.0-next.16":
+  version "5.0.0-next.16"
+  resolved "https://registry.yarnpkg.com/@cityofzion/neon-core/-/neon-core-5.0.0-next.16.tgz#f76224a564592c00b0d50fe5f620fe0dbba2a3d2"
+  integrity sha512-C9YoomPA5JuOh2HpYY99OYicJBRg+LncPbtTQ4WZ8ujQ4w9DA8DIdLJ0cfWCWFPvGxAt3dW2sxYMzWn+5oNWxg==
+  dependencies:
+    abort-controller "3.0.0"
+    bignumber.js "7.2.1"
+    bn.js "5.2.0"
+    bs58 "4.0.1"
+    buffer "6.0.3"
+    cross-fetch "^3.1.4"
+    crypto-js "4.1.1"
+    elliptic "6.5.4"
+    loglevel "1.7.1"
+    loglevel-plugin-prefix "0.8.4"
+    scrypt-js "3.0.1"
+
+"@cityofzion/neon-js@^5.0.0-next.16":
+  version "5.0.0-next.16"
+  resolved "https://registry.yarnpkg.com/@cityofzion/neon-js/-/neon-js-5.0.0-next.16.tgz#fa9b1f8331eb406a278e8883193d749750237e80"
+  integrity sha512-mN/0OHzsCPFJqN1WC/cjHBEoSEvURWRkiQdCQBLAbD71Mo12SXEWOd10858c9MQbfTPovT/pSy+eZdGSCANZwg==
+  dependencies:
+    "@cityofzion/neon-api" "^5.0.0-next.16"
+    "@cityofzion/neon-core" "^5.0.0-next.16"
+
 "@discoveryjs/json-ext@^0.5.0":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.2.tgz#8f03a22a04de437254e8ce8cc84ba39689288752"

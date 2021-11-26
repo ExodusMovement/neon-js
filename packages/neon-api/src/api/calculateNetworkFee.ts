@@ -1,4 +1,4 @@
-import { tx, sc, u, wallet } from "@cityofzion/neon-core";
+import { tx, sc, u, wallet } from "@exodus/neon-core";
 
 /**
  * Calculates the network fee required to process the transaction.

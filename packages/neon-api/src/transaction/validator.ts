@@ -1,4 +1,4 @@
-import { tx, rpc, u } from "@cityofzion/neon-core";
+import { tx, rpc, u } from "@exodus/neon-core";
 import { calculateNetworkFee, getFeeInformation } from "../api";
 
 export enum ValidationAttributes {

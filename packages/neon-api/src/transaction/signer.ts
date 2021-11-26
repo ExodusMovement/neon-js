@@ -1,4 +1,4 @@
-import { tx, wallet, u } from "@cityofzion/neon-core";
+import { tx, wallet, u } from "@exodus/neon-core";
 
 /**
  * A class with functions to sign transaction

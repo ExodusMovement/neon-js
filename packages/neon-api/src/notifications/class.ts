@@ -1,4 +1,4 @@
-import { logging } from "@cityofzion/neon-core";
+import { logging } from "@exodus/neon-core";
 import WebSocket from "isomorphic-ws";
 import { NotificationMessage, CallbackFunction } from "./responses";
 import Subscription from "./subscription";

@@ -1,4 +1,4 @@
-import { logging } from "@cityofzion/neon-core";
+import { logging } from "@exodus/neon-core";
 const log = logging.default("api");
 
 export class Subscription {

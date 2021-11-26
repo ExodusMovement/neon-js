@@ -1,4 +1,4 @@
-import { wallet, tx } from "@cityofzion/neon-core";
+import { wallet, tx } from "@exodus/neon-core";
 
 export type SigningFunction = (
   tx: tx.Transaction,

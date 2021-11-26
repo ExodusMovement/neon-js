@@ -1,4 +1,4 @@
-import { rpc, sc, u } from "@cityofzion/neon-core";
+import { rpc, sc, u } from "@exodus/neon-core";
 
 export interface TokenInfo {
   symbol: string;
